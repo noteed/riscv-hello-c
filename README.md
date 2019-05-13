@@ -1,6 +1,7 @@
 # Bare metal RISC-V hello world in C
 
-This is a copy of the [riscv-probe](https://github.com) repository stripped
+This is a copy of the
+[riscv-probe](https://github.com/michaeljclark/riscv-probe) repository stripped
 from everything but the 64-bit hello world program for the `sifive_u` QEMU
 machine.
 
@@ -11,8 +12,8 @@ to initialize libfemto. Here libfemto just provides a `puts` function.
 
 Having such a stripped down hello world program written in C was necessary for
 me to learn how to create a [bare metal RISC-V assembly hello
-world](https://github.com) version because I couldn't find a complete example
-program in assembly only that was writing to the UART.
+world](https://github.com/noteed/riscv-hello-asm) version because I couldn't
+find a complete example program in assembly only that was writing to the UART.
 
 
 ## Building
@@ -91,5 +92,7 @@ Disassembly of section .text:
     80000036:	8082              ret
 ```
 
-I used the above listing to guide modifications to the `hello.S` program
-provided in rv8 (I think) to finally create a pure assembly hello world.
+I used the above listing to guide modifications to the
+[`hello-world-abs.S`](https://github.com/rv8-io/rv8/blob/master/src/test/hello-world-abs.S)
+program provided in rv8 to finally create a [pure assembly hello
+world](https://github.com/noteed/riscv-hello-asm).
